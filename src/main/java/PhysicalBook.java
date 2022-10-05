@@ -1,4 +1,4 @@
-public class PhysicalBook extends  Book{
+public class PhysicalBook extends  Book implements  Product{
     public PhysicalBook(Author author) {
         super(author);
     }

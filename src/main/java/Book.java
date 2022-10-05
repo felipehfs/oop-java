@@ -1,4 +1,4 @@
-public abstract class Book {
+public abstract class Book implements Product{
     private String isbn;
     private double price;
     private String name;
@@ -17,6 +17,7 @@ public abstract class Book {
         this.isbn = isbn;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }

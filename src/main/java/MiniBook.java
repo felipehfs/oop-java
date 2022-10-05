@@ -1,4 +1,4 @@
-public class MiniBook extends  Book{
+public class MiniBook extends Book implements Product {
 
     public MiniBook(Author author) {
         super(author);

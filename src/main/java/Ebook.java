@@ -1,4 +1,4 @@
-public class Ebook extends Book {
+public class Ebook extends Book implements  Product{
 
     private String waterMark;
 

@@ -1,9 +1,8 @@
 public class Cart {
     private double total;
 
-    public void add(Book book) {
+    public void add(Product book) {
         System.out.println("Adicionando: " + book);
-        book.applyDiscount(0.05);
         total += book.getPrice();
     }
 

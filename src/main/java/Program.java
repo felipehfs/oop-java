@@ -5,6 +5,7 @@ public class Program {
 
         PhysicalBook book = new PhysicalBook(author);
         book.setIsbn("120032.43-43");
+        book.setName("Test-Driven development");
         book.setPrice(120.00);
         book.setName("Desvendando o Postgres");
 
@@ -12,16 +13,17 @@ public class Program {
         if (!book.applyDiscount(0.2)) {
             System.out.println("Desconto no livro não pode ser maior que 30%");
         } else {
-            System.out.println("Livro depois do desconto" + book.getPrice());
+            System.out.println("Livro depois do desconto " + book.getPrice());
         }
 
         Ebook ebook = new Ebook(author);
         ebook.setPrice(80.00);
+        ebook.setName("Test-Driven development");
 
         if (!ebook.applyDiscount(0.3)) {
             System.out.println("Desconto no ebook não pode ser maior que 15%");
         } else {
-            System.out.println("Valor do ebook com o desconto:" + ebook.getPrice());
+            System.out.println("Valor do ebook com o desconto: " + ebook.getPrice());
         }
 
         Cart cart = new Cart();
