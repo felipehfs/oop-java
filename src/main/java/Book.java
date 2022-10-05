@@ -1,15 +1,11 @@
-public class Book {
+public abstract class Book {
     private String isbn;
     private double price;
     private String name;
     private String description;
     private Author author;
 
-    public Book(String isbn, double price, String name, String description, Author author) {
-        this.isbn = isbn;
-        this.price = price;
-        this.name = name;
-        this.description = description;
+    public Book(Author author) {
         this.author = author;
     }
 
@@ -54,11 +50,5 @@ public class Book {
         System.out.println(isbn);
     }
 
-    boolean applyDiscount(double discount) {
-        if (discount < 0.3) {
-            return false;
-        }
-        this.price -= this.price * discount;
-        return true;
-    }
+    public abstract  boolean applyDiscount(double percentage);
 }
