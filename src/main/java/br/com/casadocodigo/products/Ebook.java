@@ -27,4 +27,9 @@ public class Ebook extends Book implements Product, Promotion {
         this.setPrice(this.getPrice() - discount);
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Eu sou um ebook";
+    }
 }

@@ -41,6 +41,7 @@ public class Program {
         cart.add(book);
         cart.add(ebook);
 
+        cart.getProducts();
         System.out.println("Total " + cart.getTotal());
     }
 }

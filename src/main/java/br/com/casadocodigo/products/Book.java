@@ -10,6 +10,7 @@ public abstract class Book implements Product {
     private Author author;
 
     public Book(Author author) {
+        if (author == null) throw new AuthorNullException("O autor do livro não pode ser nulo!");
         this.author = author;
     }
 
@@ -56,4 +57,12 @@ public abstract class Book implements Product {
     }
 
     public abstract  boolean applyDiscount(double percentage);
+
+    @Override
+    public String toString() {
+        return "Nome: " + name
+                + "\nDescrição: " + description
+                + "\nValor: " + price
+                + "\nISBN: " + isbn;
+    }
 }
