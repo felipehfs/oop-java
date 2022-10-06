@@ -1,3 +1,10 @@
+package br.com.casadocodigo.tests;
+
+import br.com.casadocodigo.store.Author;
+import br.com.casadocodigo.products.Cart;
+import br.com.casadocodigo.products.Ebook;
+import br.com.casadocodigo.products.PhysicalBook;
+
 public class Program {
     public static void main(String[] args) {
         Author author = new Author();
@@ -14,6 +21,10 @@ public class Program {
             System.out.println("Desconto no livro não pode ser maior que 30%");
         } else {
             System.out.println("Livro depois do desconto " + book.getPrice());
+        }
+
+        if (!book.applyDiscount10Percent()) {
+            System.out.println("Valor agora é " + book.getPrice());
         }
 
         Ebook ebook = new Ebook(author);

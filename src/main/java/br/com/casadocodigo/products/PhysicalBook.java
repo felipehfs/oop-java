@@ -1,4 +1,8 @@
-public class PhysicalBook extends  Book implements  Product{
+package br.com.casadocodigo.products;
+
+import br.com.casadocodigo.store.Author;
+
+public class PhysicalBook extends Book implements Product, Promotion {
     public PhysicalBook(Author author) {
         super(author);
     }

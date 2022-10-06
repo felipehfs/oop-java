@@ -1,3 +1,5 @@
+package br.com.casadocodigo.products;
+
 public class Cart {
     private double total;
 

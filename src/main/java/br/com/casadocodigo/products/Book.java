@@ -1,4 +1,8 @@
-public abstract class Book implements Product{
+package br.com.casadocodigo.products;
+
+import br.com.casadocodigo.store.Author;
+
+public abstract class Book implements Product {
     private String isbn;
     private double price;
     private String name;
