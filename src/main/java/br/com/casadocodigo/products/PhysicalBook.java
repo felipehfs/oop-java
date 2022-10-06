@@ -21,4 +21,9 @@ public class PhysicalBook extends Book implements Product, Promotion {
     public double getPrinterTax() {
         return this.getPrice() * 0.05;
     }
+
+    @Override
+    public int compareTo(Product other) {
+        return Double.compare(this.getPrice(), other.getPrice());
+    }
 }

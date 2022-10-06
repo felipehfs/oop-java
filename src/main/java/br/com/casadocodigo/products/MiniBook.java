@@ -12,4 +12,9 @@ public class MiniBook extends Book implements Product {
     public boolean applyDiscount(double percentage) {
         return false;
     }
+
+    @Override
+    public int compareTo(Product other) {
+        return Double.compare(this.getPrice(), other.getPrice());
+    }
 }

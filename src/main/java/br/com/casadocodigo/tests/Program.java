@@ -1,9 +1,14 @@
 package br.com.casadocodigo.tests;
 
+import br.com.casadocodigo.products.Product;
 import br.com.casadocodigo.store.Author;
 import br.com.casadocodigo.products.Cart;
 import br.com.casadocodigo.products.Ebook;
 import br.com.casadocodigo.products.PhysicalBook;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
@@ -41,7 +46,13 @@ public class Program {
         cart.add(book);
         cart.add(ebook);
 
-        cart.getProducts();
+        List<Product> products = Arrays.asList(book, ebook);
+        Collections.sort(products);
+
+        for (Product product: products) {
+            System.out.println(product);
+        }
+
         System.out.println("Total " + cart.getTotal());
     }
 }

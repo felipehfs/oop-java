@@ -58,6 +58,7 @@ public abstract class Book implements Product {
 
     public abstract  boolean applyDiscount(double percentage);
 
+
     @Override
     public String toString() {
         return "Nome: " + name

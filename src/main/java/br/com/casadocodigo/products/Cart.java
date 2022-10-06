@@ -1,29 +1,23 @@
 package br.com.casadocodigo.products;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cart {
     private double total;
-    private Product[] products = new Product[10];
+    private List<Product> products;
     private int counter = 0;
-
-    public void add(Product book) {
-        System.out.println("Adicionando: " + book);
-        try {
-            products[counter] = book;
-            counter++;
-            total += book.getPrice();
-        }catch (Exception e) {
-            System.out.println("Erro insperado: " + e);
-        }
-
+    public  Cart () {
+        this.products = new ArrayList<>();
     }
 
-    public void getProducts() {
-        for (int i = 0; i < products.length; i++) {
-            Product product = products[i];
-            if (product != null) {
-                System.out.println(product.getPrice());
-            }
-        }
+    public void add(Product book) {
+        products.add(book);
+        total += book.getPrice();
+    }
+
+    public List<Product> getProducts() {
+       return products;
     }
 
     public double getTotal() {

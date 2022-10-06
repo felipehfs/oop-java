@@ -30,6 +30,11 @@ public class Ebook extends Book implements Product, Promotion {
 
     @Override
     public String toString() {
-        return "Eu sou um ebook";
+        return "name: " + getName();
+    }
+
+    @Override
+    public int compareTo(Product other) {
+        return Double.compare(this.getPrice(), other.getPrice());
     }
 }

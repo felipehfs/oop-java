@@ -18,4 +18,9 @@ public class Magazine  implements Product, Promotion {
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public int compareTo(Product other) {
+        return Double.compare(this.price, other.getPrice());
+    }
 }
