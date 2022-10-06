@@ -1,10 +1,7 @@
 package br.com.casadocodigo.tests;
 
-import br.com.casadocodigo.products.Product;
+import br.com.casadocodigo.products.*;
 import br.com.casadocodigo.store.Author;
-import br.com.casadocodigo.products.Cart;
-import br.com.casadocodigo.products.Ebook;
-import br.com.casadocodigo.products.PhysicalBook;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -54,5 +51,13 @@ public class Program {
         }
 
         System.out.println("Total " + cart.getTotal());
+        TicketManager ticketManager = new TicketManager();
+        Double discount = ticketManager.validateTicket("CUP1234");
+        if (discount != null) {
+            System.out.println("Cupom de desconto válido.");
+            System.out.println("Valor " + discount);
+        } else {
+            System.out.println("Esse cupom não existe.");
+        }
     }
 }
